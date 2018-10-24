@@ -37,6 +37,9 @@ func makeConfig(user string, password string, privateKey string) (config *ssh.Cl
 		Auth: []ssh.AuthMethod{
 			ssh.Password(password),
 		},
+		HostKeyCallback: func(hostname string, remote net.Addr, key ssh.PublicKey) error {
+			return nil
+		},
 	}
 	if privateKey != "" {
 		signer, err := ssh.ParsePrivateKey([]byte(privateKey))
