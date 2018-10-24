@@ -13,7 +13,7 @@ ssh tool library for Go,gosshtool provide some useful functions for ssh client i
 
 ## Installation
 ```bash
-go get -u github.com/scottkiss/gosshtool
+go get -u github.com/eyeits/gosshtool
 ```
 
 ## Examples
